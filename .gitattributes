@@ -1,11 +1,42 @@
-# Báo cho GitHub bỏ qua các thư mục nền Native, không tính vào thống kê ngôn ngữ
-android/** linguist-vendored
-ios/** linguist-vendored
-web/** linguist-vendored
-windows/** linguist-vendored
-linux/** linguist-vendored
-macos/** linguist-vendored
+# Loại trừ toàn bộ thư viện nội bộ và các thư mục nền Native
+packages/** linguist-vendored
+packages/** linguist-detectable=false
 
-# Bỏ qua các file sinh tự động
+android/** linguist-vendored
+android/** linguist-detectable=false
+
+ios/** linguist-vendored
+ios/** linguist-detectable=false
+
+web/** linguist-vendored
+web/** linguist-detectable=false
+
+windows/** linguist-vendored
+windows/** linguist-detectable=false
+
+linux/** linguist-vendored
+linux/** linguist-detectable=false
+
+macos/** linguist-vendored
+macos/** linguist-detectable=false
+
+# Loại trừ tất cả các tệp code không phải Dart khỏi thống kê ngôn ngữ
+*.java linguist-detectable=false
+*.kt linguist-detectable=false
+*.swift linguist-detectable=false
+*.m linguist-detectable=false
+*.h linguist-detectable=false
+*.cc linguist-detectable=false
+*.cpp linguist-detectable=false
+*.podspec linguist-detectable=false
+*.cmake linguist-detectable=false
+CMakeLists.txt linguist-detectable=false
+*.rb linguist-detectable=false
+*.html linguist-detectable=false
+*.xml linguist-detectable=false
+*.gradle linguist-detectable=false
+*.kts linguist-detectable=false
+
+# File tự sinh
 *.g.dart linguist-generated
 *.freezed.dart linguist-generated
